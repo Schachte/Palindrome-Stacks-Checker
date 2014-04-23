@@ -6,7 +6,7 @@ import java.util.*;
  * Stores stack forward order and stack reverse order into two seperate string and determines if word is a palindrome
  */
 
-public class PalindromeStacks {
+public class Stacker {
 	
 	public static void main(String[]args)
 	{
@@ -14,6 +14,7 @@ public class PalindromeStacks {
 		Stack<String> stackInformation = new Stack<String>();
 		String forward  = "";
 		String reversed = "";
+		boolean isPalindrome = false;
 		
 		System.out.println("Enter a word with a new character on each line: \n\nEnter \"end\" to finalize the word!");
 		
@@ -50,13 +51,16 @@ public class PalindromeStacks {
 		System.out.println("");
 
 		if (forward.equalsIgnoreCase(reversed))
-		{
-			System.out.println("This is a palindrome!");
-		}
+			isPalindrome = true;
+			
 		else
-		{
+			isPalindrome = false;
+		
+		if (isPalindrome)
+			System.out.println("This is a palindrome!");
+			
+		else if(!isPalindrome)
 			System.out.println("This is not a palindrome..");
-		}
 	}
 
 }
