@@ -6,7 +6,7 @@ import java.util.*;
  * Stores stack forward order and stack reverse order into two seperate string and determines if word is a palindrome
  */
 
-public class Stacker {
+public class PalindromeStacks {
 	
 	public static void main(String[]args)
 	{
